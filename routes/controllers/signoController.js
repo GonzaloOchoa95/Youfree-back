@@ -43,7 +43,7 @@ const Subirvideo = async (req, res) => {
   
       // Guardar la URL del video en MongoDB
       const videonew = new Video({
-        url: `https://${process.env.bucket-youfree}.s3.${process.env.AWS_REGION}.amazonaws.com/${uniqueKey}`,
+        url: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${uniqueKey}`,
         filename: fileName, // Guardar el nombre renombrado
         usuario: iduser,
         fechaSubida: new Date(),
